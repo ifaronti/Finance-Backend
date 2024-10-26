@@ -1,10 +1,8 @@
 import { Router } from "express";
-import {
-  getPots,
-  createPot,
-  updatePot,
-  deletepot,
-} from "../controller/pots.controller";
+import { getPots } from "../controller/pots/getPots";
+import { updatePot } from "../controller/pots/updatePot";
+import { createPot } from "../controller/pots/createPot";
+import { deletepot } from "../controller/pots/deletePot";
 
 const potRouter = Router();
 

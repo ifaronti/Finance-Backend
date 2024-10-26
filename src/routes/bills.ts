@@ -1,9 +1,7 @@
 import { Router } from "express";
-import {
-  getBills,
-  createBills,
-  deleteBill,
-} from "../controller/bills.controller";
+import { deleteBill } from "../controller/bills/deleteBill";
+import { createBills } from "../controller/bills/createBill";
+import { getBills } from "../controller/bills/getBills";
 
 const billsRouter = Router();
 

@@ -13,14 +13,10 @@ type catQuery = {
 
 export const transactions:controller = async (req, res) => {
   const { skip, sort, category, name } = req.query;
-
   //@ts-expect-error from middleware function 
   const query: catQuery = { userId: req.user };
+
   if (category && category !=='' && category !=="All Transactions" && category !==undefined){
-    if (category === "Bills") {
-      query.category = category.toString()
-      query.recurring=true
-    }
     query.category = category.toString();
   }
   if (name && name !==undefined && name !==null && name !=='') {
@@ -48,7 +44,7 @@ export const transactions:controller = async (req, res) => {
   }
   
   catch (err) {
-    //@ts-expect-error won't accept err type 
+    //@ts-expect-error won't accept any type 
     res.send(err.message)
   }
 };  
