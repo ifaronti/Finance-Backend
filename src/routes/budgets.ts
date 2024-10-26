@@ -1,10 +1,8 @@
 import { Router } from "express";
-import {
-  getBudgets,
-  createbudget,
-  updateBudget,
-  deleteBudget,
-} from "../controller/budget.controller";
+import { getBudgets } from "../controller/budgets/getBudgets";
+import { createbudget } from "../controller/budgets/createBudget";
+import { updateBudget } from "../controller/budgets/updateBudget";
+import { deleteBudget } from "../controller/budgets/deleteBudget";
 
 const budgetsRouter = Router();
 

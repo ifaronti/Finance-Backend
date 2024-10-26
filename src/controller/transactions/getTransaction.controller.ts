@@ -13,9 +13,9 @@ type catQuery = {
 
 export const transactions:controller = async (req, res) => {
   const { skip, sort, category, name } = req.query;
-
   //@ts-expect-error from middleware function 
   const query: catQuery = { userId: req.user };
+
   if (category && category !=='' && category !=="All Transactions" && category !==undefined){
     query.category = category.toString();
   }
@@ -44,7 +44,7 @@ export const transactions:controller = async (req, res) => {
   }
   
   catch (err) {
-    //@ts-expect-error won't accept err type 
+    //@ts-expect-error won't accept any type 
     res.send(err.message)
   }
 };  
