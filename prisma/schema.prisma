@@ -13,7 +13,7 @@ model User {
   name         String         @db.VarChar(30)
   avatar       String         @db.VarChar()
   balance      Int
-  expenses     Int
+  expenses     Int            @default(0)
   income       Int
   password     String?        @db.VarChar()
   updatedAt    DateTime       @updatedAt
