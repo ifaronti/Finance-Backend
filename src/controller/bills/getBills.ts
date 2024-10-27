@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { controller } from "../auth/auth.controller";
+import { controller } from "../auth/signup.controller";
 import { sortResponse } from "../../support/sort";
 
 const prisma = new PrismaClient();

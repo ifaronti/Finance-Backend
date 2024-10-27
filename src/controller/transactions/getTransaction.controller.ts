@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { controller } from "../auth/auth.controller";
+import { controller } from "../auth/signup.controller";
 import { sortResponse } from "../../support/sort";
 
 const prisma = new PrismaClient();
@@ -19,6 +19,7 @@ export const transactions:controller = async (req, res) => {
   if (category && category !=='' && category !=="All Transactions" && category !==undefined){
     query.category = category.toString();
   }
+  
   if (name && name !==undefined && name !==null && name !=='') {
     query.name = { contains: name?.toString(), mode: 'insensitive' }
   }

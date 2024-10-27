@@ -13,7 +13,7 @@ model User {
   name         String         @db.VarChar(30)
   avatar       String         @db.VarChar()
   balance      Int
-  expenses     Int
+  expenses     Int            @default(0)
   income       Int
   password     String?        @db.VarChar()
   updatedAt    DateTime       @updatedAt
@@ -35,6 +35,7 @@ model Transactions {
   name            String
   amount          Int
   avatar          String
+  isPlaceholder   Boolean  @default(false)
   user            User?    @relation(fields: [userId], references: [id])
 }
 
@@ -49,19 +50,21 @@ model Budget {
   updatedAt       DateTime @default(now()) @updatedAt
   spent           Int
   userId          Int
+  isPlaceholder   Boolean  @default(false)
   user            User?    @relation(fields: [userId], references: [id])
 }
 
 model Pot {
-  potId     Int      @id @unique @default(autoincrement())
-  theme     String
-  target    Int
-  total     Int
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
-  name      String
-  userId    Int
-  user      User     @relation(fields: [userId], references: [id])
+  potId         Int      @id @unique @default(autoincrement())
+  theme         String
+  target        Int
+  total         Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now()) @updatedAt
+  name          String
+  isPlaceholder Boolean  @default(false)
+  userId        Int
+  user          User     @relation(fields: [userId], references: [id])
 }
 
 model Bills {
@@ -69,6 +72,7 @@ model Bills {
   name            String
   amount          Int
   category        String
+  isPlaceholder   Boolean  @default(false)
   avatar          String
   category_Relate Category @relation(fields: [categoryId], references: [categoryId])
   categoryId      Int

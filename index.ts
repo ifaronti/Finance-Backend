@@ -1,5 +1,5 @@
 import express from "express";
-import * as data from "./data.json";
+ import * as data from "./data.json";
 import { PrismaClient } from "@prisma/client";
 
 const app = express();
@@ -10,8 +10,7 @@ app.post("/", async (req, res) => {
   await prisma.transactions.createMany({data: data.transactions});
   await prisma.pot.createMany({ data: data.pots });
   await prisma.budget.createMany({ data: data.budgets });
-  await prisma.bills.createMany({data: data.RecurringsBills})
-
+  await prisma.bills.createMany({data: data.recurringBills})
 
   res.send("done");
 });

@@ -6,9 +6,9 @@ import dotenv from "dotenv";
 dotenv.config();
 const jwt = jsonwebtoken;
 
-type thisController = ( req: Request, res: Response ,next:NextFunction)=>void
+type controller = ( req:Request, res:Response, next:NextFunction)=>void
 
-export const authChecker:thisController = async (req, res, next) => {
+export const authChecker:controller = async (req, res, next) => {
   const { authorization } = req.headers;
 
   if (!authorization || !authorization.toString().startsWith("Booyaba")) {
@@ -16,10 +16,9 @@ export const authChecker:thisController = async (req, res, next) => {
   }
 
   const authToken = authorization.toString().split(" ")[1];
-
   const payload = jwt.verify(authToken, process.env.JWT_ASHIRI as string);
 
-  // @ts-expect-error user is not a property of type request object but I'm adding it for authentication sake
+  // @ts-expect-error user is not a property of type request. Adding it for auth.
   req.user = payload.userId;
   next();
 };
