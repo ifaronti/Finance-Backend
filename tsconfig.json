@@ -12,7 +12,7 @@
       "forceConsistentCasingInFileNames": true,
       "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
       "emitDecoratorMetadata": true,
-  
+      "resolveJsonModule": true,
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
