@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "Finance-App-executor",
+    "name": "Finance-App",
+    "region": "eu-west-1"
+  },
+  "api": {
+    "id": "sx6iq25ia1"
+  }
+}

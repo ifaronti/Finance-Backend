@@ -35,12 +35,12 @@ export const createbudget: controller = async (req, res) => {
         categoryId:categoryId,
         maximum: Number(maximum),
         theme: theme,
-        spent: Number(totalSpent._sum.amount?.toString().replace('-','')),
+        spent: Number(totalSpent._sum.amount?.toString().replace('-',''))||0,
         userId: userId,
-        category: category, 
+        category: category,
       },
     });
-    if (!newBudget) {
+    if (!newBudget.budgetId) {
       return res.end("An error has occured, Budget was not created");
     }
   

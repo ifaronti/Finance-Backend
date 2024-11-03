@@ -6,7 +6,7 @@
     },
     "transactions": [
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/emma-richardson.jpg",
             "name": "Emma Richardson",
             "category": "General",
@@ -17,7 +17,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/savory-bites-bistro.jpg",
             "name": "Savory Bites Bistro",
             "category": "Dining Out",
@@ -28,7 +28,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/daniel-carter.jpg",
             "name": "Daniel Carter",
             "category": "General",
@@ -39,7 +39,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sun-park.jpg",
             "name": "Sun Park",
             "category": "General",
@@ -50,7 +50,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/urban-services-hub.jpg",
             "name": "Urban Services Hub",
             "category": "General",
@@ -61,7 +61,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/liam-hughes.jpg",
             "name": "Liam Hughes",
             "category": "Groceries",
@@ -72,7 +72,7 @@
             "categoryId": 3
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/lily-ramirez.jpg",
             "name": "Lily Ramirez",
             "category": "General",
@@ -83,7 +83,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ethan-clark.jpg",
             "name": "Ethan Clark",
             "category": "Dining Out",
@@ -94,7 +94,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/james-thompson.jpg",
             "name": "James Thompson",
             "category": "Entertainment",
@@ -105,7 +105,7 @@
             "categoryId": 10
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/pixel-playground.jpg",
             "name": "Pixel Playground",
             "category": "Entertainment",
@@ -116,7 +116,7 @@
             "categoryId": 10
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ella-phillips.jpg",
             "name": "Ella Phillips",
             "category": "Dining Out",
@@ -127,7 +127,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sofia-peterson.jpg",
             "name": "Sofia Peterson",
             "category": "Transportation",
@@ -138,7 +138,7 @@
             "categoryId": 5
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/mason-martinez.jpg",
             "name": "Mason Martinez",
             "category": "Lifestyle",
@@ -149,7 +149,7 @@
             "categoryId": 8
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/green-plate-eatery.jpg",
             "name": "Green Plate Eatery",
             "category": "Groceries",
@@ -160,7 +160,7 @@
             "categoryId": 3
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sebastian-cook.jpg",
             "name": "Sebastian Cook",
             "category": "Transportation",
@@ -171,7 +171,7 @@
             "categoryId": 5
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/william-harris.jpg",
             "name": "William Harris",
             "category": "Personal Care",
@@ -182,7 +182,7 @@
             "categoryId": 6
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/elevate-education.jpg",
             "name": "Elevate Education",
             "category": "Education",
@@ -193,7 +193,7 @@
             "categoryId": 1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/serenity-spa-and-wellness.jpg",
             "name": "Serenity Spa & Wellness",
             "category": "Personal Care",
@@ -204,7 +204,7 @@
             "categoryId": 6
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/spark-electric-solutions.jpg",
             "name": "Spark Electric Solutions",
             "category": "Bills",
@@ -215,7 +215,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/rina-sato.jpg",
             "name": "Rina Sato",
             "category": "Bills",
@@ -226,7 +226,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/swift-ride-share.jpg",
             "name": "Swift Ride Share",
             "category": "Transportation",
@@ -237,7 +237,7 @@
             "categoryId": 5
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/aqua-flow-utilities.jpg",
             "name": "Aqua Flow Utilities",
             "category": "Bills",
@@ -248,7 +248,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ecofuel-energy.jpg",
             "name": "EcoFuel Energy",
             "category": "Bills",
@@ -259,7 +259,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/yuna-kim.jpg",
             "name": "Yuna Kim",
             "category": "Dining Out",
@@ -270,7 +270,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/flavor-fiesta.jpg",
             "name": "Flavor Fiesta",
             "category": "Dining Out",
@@ -281,7 +281,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/harper-edwards.jpg",
             "name": "Harper Edwards",
             "category": "Shopping",
@@ -292,7 +292,7 @@
             "categoryId": 9
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/buzz-marketing-group.jpg",
             "name": "Buzz Marketing Group",
             "category": "General",
@@ -303,7 +303,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/technova-innovations.jpg",
             "name": "TechNova Innovations",
             "category": "Shopping",
@@ -314,7 +314,7 @@
             "categoryId": 9
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/bytewise.jpg",
             "name": "ByteWise",
             "category": "Lifestyle",
@@ -325,7 +325,7 @@
             "categoryId": 8
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/nimbus-data-storage.jpg",
             "name": "Nimbus Data Storage",
             "category": "Bills",
@@ -336,7 +336,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/emma-richardson.jpg",
             "name": "Emma Richardson",
             "category": "General",
@@ -347,7 +347,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/daniel-carter.jpg",
             "name": "Daniel Carter",
             "category": "General",
@@ -358,7 +358,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sun-park.jpg",
             "name": "Sun Park",
             "category": "General",
@@ -369,7 +369,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/harper-edwards.jpg",
             "name": "Harper Edwards",
             "category": "Shopping",
@@ -380,7 +380,7 @@
             "categoryId": 9
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/liam-hughes.jpg",
             "name": "Liam Hughes",
             "category": "Groceries",
@@ -391,7 +391,7 @@
             "categoryId": 3
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/lily-ramirez.jpg",
             "name": "Lily Ramirez",
             "category": "General",
@@ -402,7 +402,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ethan-clark.jpg",
             "name": "Ethan Clark",
             "category": "Dining Out",
@@ -413,7 +413,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/rina-sato.jpg",
             "name": "Rina Sato",
             "category": "Entertainment",
@@ -424,7 +424,7 @@
             "categoryId": 10
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/james-thompson.jpg",
             "name": "James Thompson",
             "category": "Bills",
@@ -435,7 +435,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ella-phillips.jpg",
             "name": "Ella Phillips",
             "category": "Dining Out",
@@ -445,7 +445,7 @@
             "userId":1,
             "categoryId": 4
         },
-        {   "isPlaceHolder":true,
+        {   "isPlaceholder":true,
             "avatar": "./assets/images/avatars/yuna-kim.jpg",
             "name": "Yuna Kim",
             "category": "Dining Out",
@@ -456,7 +456,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sofia-peterson.jpg",
             "name": "Sofia Peterson",
             "category": "Transportation",
@@ -467,7 +467,7 @@
             "categoryId": 5
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/mason-martinez.jpg",
             "name": "Mason Martinez",
             "category": "Lifestyle",
@@ -478,7 +478,7 @@
             "categoryId": 8
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/sebastian-cook.jpg",
             "name": "Sebastian Cook",
             "category": "Transportation",
@@ -489,7 +489,7 @@
             "categoryId": 5
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/william-harris.jpg",
             "name": "William Harris",
             "category": "General",
@@ -500,7 +500,7 @@
             "categoryId": 7
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/elevate-education.jpg",
             "name": "Elevate Education",
             "category": "Education",
@@ -511,7 +511,7 @@
             "categoryId": 1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/serenity-spa-and-wellness.jpg",
             "name": "Serenity Spa & Wellness",
             "category": "Personal Care",
@@ -522,7 +522,7 @@
             "categoryId": 6
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/spark-electric-solutions.jpg",
             "name": "Spark Electric Solutions",
             "category": "Bills",
@@ -533,7 +533,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/swift-ride-share.jpg",
             "name": "Swift Ride Share",
             "category": "Transportation",
@@ -546,7 +546,7 @@
     ],
     "budgets": [
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "category": "Entertainment",
             "maximum": 50.00,
             "theme": "#277C78",
@@ -555,7 +555,7 @@
             "categoryId": 10
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "category": "Bills",
             "maximum": 750.00,
             "theme": "#82C9D7",
@@ -564,7 +564,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "category": "Dining Out",
             "maximum": 75.00,
             "theme": "#F2CDAC",
@@ -573,7 +573,7 @@
             "categoryId": 4
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "category": "Personal Care",
             "maximum": 100.00,
             "theme": "#626070",
@@ -584,7 +584,7 @@
     ],
     "pots": [
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "name": "Savings",
             "target": 2000.00,
             "total": 159.00,
@@ -592,7 +592,7 @@
             "userId":1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "name": "Concert Ticket",
             "target": 150.00,
             "total": 110.00,
@@ -600,7 +600,7 @@
             "userId":1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "name": "Gift",
             "target": 60.00,
             "total": 40.00,
@@ -608,7 +608,7 @@
             "userId":1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "name": "New Laptop",
             "target": 1000.00,
             "total": 10.00,
@@ -616,7 +616,7 @@
             "userId":1
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "name": "Holiday",
             "target": 1440.00,
             "total": 531.00,
@@ -641,7 +641,7 @@
 
     "recurringBills":[
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/nimbus-data-storage.jpg",
             "name": "Nimbus Data Storage",
             "category": "Bills",
@@ -650,7 +650,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/bytewise.jpg",
             "name": "ByteWise",
             "category": "Lifestyle",
@@ -660,7 +660,7 @@
         },
 
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/ecofuel-energy.jpg",
             "name": "EcoFuel Energy",
             "category": "Bills",
@@ -670,7 +670,7 @@
         },
 
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/aqua-flow-utilities.jpg",
             "name": "Aqua Flow Utilities",
             "category": "Bills",
@@ -679,7 +679,7 @@
             "categoryId": 2
         },
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/spark-electric-solutions.jpg",
             "name": "Spark Electric Solutions",
             "category": "Bills",
@@ -689,7 +689,7 @@
         },
 
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/serenity-spa-and-wellness.jpg",
             "name": "Serenity Spa & Wellness",
             "category": "Personal Care",
@@ -699,7 +699,7 @@
         },
 
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/elevate-education.jpg",
             "name": "Elevate Education",
             "category": "Education",
@@ -709,7 +709,7 @@
         },
 
         {
-            "isPlaceHolder":true,
+            "isPlaceholder":true,
             "avatar": "./assets/images/avatars/pixel-playground.jpg",
             "name": "Pixel Playground",
             "category": "Entertainment",

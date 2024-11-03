@@ -3,14 +3,7 @@ import { controller } from "../auth/signup.controller";
 
 const prisma = new PrismaClient();
 
-type getBudgetsBody = {
-  userId?: number;
-  skip?: number;
-};
-
-
 export const getBudgets: controller = async (req, res) => {
-  const { skip }: getBudgetsBody = req.body;
   // @ts-expect-error middleware
   const userId = Number(req.user)
   
@@ -19,7 +12,7 @@ export const getBudgets: controller = async (req, res) => {
       userId: userId,
     },
     take: 10,
-    skip:skip,
+    skip:0,
     include: {
       category_relate: {
         select: {

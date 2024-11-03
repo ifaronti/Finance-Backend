@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
 datasource db {
@@ -22,10 +23,11 @@ model User {
   Pot          Pot[]
   transactions Transactions[]
   Bills        Bills[]
+  usedTokens String[]
 }
 
 model Transactions {
-  transactionId   Int      @id @unique @default(autoincrement())
+  transactionId   Int      @id @default(autoincrement())
   userId          Int
   recurring       Boolean
   categoryId      Int
