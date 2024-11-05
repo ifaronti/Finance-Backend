@@ -19,7 +19,7 @@ export const createBills: controller = async (req, res) => {
     }
   
     const balanceUpdateJob = CronJob.from({
-      cronTime: `0 0 ${dayOfMonth - 1} * *`,
+      cronTime: `0 0 ${dayOfMonth} * *`,
       onTick: async function () {
         await prisma.user.update({
           where: { id: userId },
@@ -27,22 +27,20 @@ export const createBills: controller = async (req, res) => {
         });
   
         await prisma.transactions.create({
-          data: {
-            amount,
-            name,
-            avatar,
-            category,
-            categoryId,
-            recurring: true,
-            userId: userId,
-            date: new Date(),
-          },
-        });
+          data: { amount, name, avatar, category, categoryId, recurring: true, userId }
+        })
       },
-      start: true,
+      start: false,
       timeZone: "Europe/London",
     });
-    balanceUpdateJob.start();
+  const checkBill = await prisma.bills.findFirst({ where: { BillId: newBill.BillId } })
+  
+  if (!checkBill?.BillId) {
+    balanceUpdateJob.stop()
+  }
+  if (checkBill?.BillId) {
+    balanceUpdateJob.start()
+  }
   
     return res.end("Bill created");
   };
