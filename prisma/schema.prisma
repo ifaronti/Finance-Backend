@@ -11,7 +11,7 @@ datasource db {
 model User {
   id           Int            @id @unique @default(autoincrement())
   email        String         @unique
-  name         String         @db.VarChar(30)
+  name         String         @db.VarChar()
   avatar       String         @db.VarChar()
   balance      Int
   expenses     Int            @default(0)
