@@ -21,10 +21,9 @@ export const oAuthLogin:controller = async(req, res) => {
     const { code } = req.query
     try {
         const data:userData = await getGithubUserData(String(code))
-
         let user = await prisma.user.findFirst({ where: { id: data.id } })
 
-        if (user?.id && user?.id !== data.id) {
+        if (user?.id && user?.email !== data.email) {
            await prisma.user.update({data: {email:String(data.email)}, where:{id:user.id}})
         }
         
@@ -39,7 +38,8 @@ export const oAuthLogin:controller = async(req, res) => {
                 income:5000
             }
         })
-        await populateUserData(user.id)
+            await populateUserData(user.id)
+            
         }
         const accessToken = jwt.sign({user:user.email, userId:user.id}, String(process.env.JWT_ASHIRI))
         
@@ -47,6 +47,6 @@ export const oAuthLogin:controller = async(req, res) => {
     }
     catch (err) {
         //@ts-expect-error err type unknown
-        console.log(err.message);
+        res.send(err.message);
     }
 }
