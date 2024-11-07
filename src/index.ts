@@ -7,6 +7,7 @@ import transactionsRouter from "./routes/transactions";
 import budgetsRouter from "./routes/budgets";
 import potRouter from "./routes/pots";
 import billsRouter from "./routes/bills";
+import userRouter from "./routes/user";
 import { config } from "dotenv";
 config()
 
@@ -21,6 +22,7 @@ app.use("/api", authChecker, [
   budgetsRouter,
   potRouter,
   billsRouter,
+  userRouter
 ]);
 
 // const port = process.env.PORT || 4000;
