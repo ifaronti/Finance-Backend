@@ -17,8 +17,7 @@ type reqBody = {
 };
 
 export const Register: controller = async (req, res) => {
-  const { email, name, password, income, avatar}: reqBody =
-    req.body;
+  const { email, name, password, income, avatar}: reqBody =req.body;
   const salt = await bcryptjs.genSalt(10);
   const hashed = await bcryptjs.hash(password, salt);
 
