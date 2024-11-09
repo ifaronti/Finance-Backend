@@ -25,7 +25,7 @@ export const oAuthLogin:controller = async(req, res) => {
 
         if (user?.id && user?.email !== data.email) {
            await prisma.user.update({data: {email:String(data.email)}, where:{id:user.id}})
-        }
+        }    
         
         if (!user?.id) {
         user = await prisma.user.create({
@@ -39,7 +39,6 @@ export const oAuthLogin:controller = async(req, res) => {
             }
         })
             await populateUserData(user.id)
-            
         }
         const accessToken = jwt.sign({user:user.email, userId:user.id}, String(process.env.JWT_ASHIRI))
         
@@ -50,3 +49,18 @@ export const oAuthLogin:controller = async(req, res) => {
         res.send(err.message);
     }
 }
+
+// let user = await prisma.user.upsert({
+//     where:{email:data.email},
+//     update: {
+//        email:data.email
+//     },
+//     create: {
+//         githubID:data.id,
+//         email: data.email,
+//         name: data.name,
+//         avatar: '.'+data.avatar_url,
+//         balance: 5000,
+//         income:5000
+//     }
+// })  

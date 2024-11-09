@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
@@ -23,7 +23,8 @@ model User {
   Pot          Pot[]
   transactions Transactions[]
   Bills        Bills[]
-  usedTokens String[]
+  usedTokens   String[]
+  githubID     Int?           @unique
 }
 
 model Transactions {
