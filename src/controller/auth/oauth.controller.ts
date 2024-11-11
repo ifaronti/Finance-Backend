@@ -51,7 +51,7 @@ export const oAuthLogin:controller = async(req, res) => {
             data: {
                 githubID:data.id,
                 email:String(verifiedEmail),
-                name: data.name? data.name:data.login,
+                name: data.name,
                 avatar: '.'+data.avatar_url,
                 balance: 5000,
                 income:5000
@@ -63,6 +63,7 @@ export const oAuthLogin:controller = async(req, res) => {
         
         return res.status(200).json({ success: true, accessToken: accessToken, name:user.name })
     }
+
     catch (err) {
         //@ts-expect-error err type unknown
         res.json({success:false, message:err.message});
