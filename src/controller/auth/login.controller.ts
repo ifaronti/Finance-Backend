@@ -34,5 +34,5 @@ export const Login: controller = async (req, res) => {
       expiresIn: "1d",
     });
   
-    return res.status(200).json({ success: true, accessToken: token });
+    return res.status(200).json({ success: true, accessToken: token, name:user?.name });
   };
