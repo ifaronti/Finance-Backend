@@ -11,7 +11,7 @@ export const deleteBill: controller = async (req, res) => {
     await prisma.bills.delete({
       where: {
         userId: userId,
-        BillId: Number(id),
+        billId: Number(id),
       },
     });
   

@@ -15,7 +15,7 @@ export const createBills: controller = async (req, res) => {
     data: { amount, name, avatar, category, categoryId, userId: userId },
   });
 
-  if (!newBill.BillId) {
+  if (!newBill.billId) {
     return res.end("An error occured, please try again");
   }
 
@@ -34,12 +34,12 @@ export const createBills: controller = async (req, res) => {
     start: false,
     timeZone: "Europe/London",
   });
-  const checkBill = await prisma.bills.findFirst({ where: { BillId: newBill.BillId } })
+  const checkBill = await prisma.bills.findFirst({ where: { billId: newBill.billId } })
   
-  if (!checkBill?.BillId) {
+  if (!checkBill?.billId) {
     balanceUpdateJob.stop()
   }
-  if (checkBill?.BillId) {
+  if (checkBill?.billId) {
     balanceUpdateJob.start()
   }
   

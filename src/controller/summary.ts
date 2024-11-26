@@ -32,7 +32,7 @@ export const Summaries: controller = async (req, res) => {
         }
       })
 
-    const budgetAggregate = await prisma.budget.aggregate({
+    const budgetAggregate = await prisma.budgets.aggregate({
         where: { userId: userId },
         _sum: {
             maximum: true,
@@ -40,7 +40,7 @@ export const Summaries: controller = async (req, res) => {
         },
     })
 
-    const budgetSnippet = await prisma.budget.findMany({
+    const budgetSnippet = await prisma.budgets.findMany({
         where: { userId: userId },
         select: {
             category: true,
@@ -50,14 +50,14 @@ export const Summaries: controller = async (req, res) => {
         take:4
     })
 
-    const potsTotal = await prisma.pot.aggregate({
+    const potsTotal = await prisma.pots.aggregate({
         where: { userId: userId },
         _sum: {
             total: true,
         },
     })
 
-    const potSnippet = await prisma.pot.findMany({
+    const potSnippet = await prisma.pots.findMany({
         where: { userId: userId },
         select: {
             theme: true,
