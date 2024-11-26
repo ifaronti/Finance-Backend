@@ -24,7 +24,7 @@ export const updateBudget: controller = async (req, res) => {
       return res.end("Retrieval parameters are required");
     }
   
-    const budgetUpdate = await prisma.budget.update({
+    const budgetUpdate = await prisma.budgets.update({
       where: {
         userId: userId,
         budgetId: Number(budget.budgetId),

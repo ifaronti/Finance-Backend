@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { Response, Request } from "express";
 import bcryptjs from "bcryptjs";
 import { populateUserData } from "../../support/placeHolder";
+import * as placeholderData from '../../data.json'
 const prisma = new PrismaClient();
 
 export type controller = (req: Request, res: Response) => void;
@@ -17,12 +18,13 @@ type reqBody = {
 };
 
 export const Register: controller = async (req, res) => {
-  const { email, name, password, income, avatar}: reqBody =req.body;
+  const { email, name, password, avatar}: reqBody =req.body;
   const salt = await bcryptjs.genSalt(10);
   const hashed = await bcryptjs.hash(password, salt);
+  const {current, income, expenses} = placeholderData.balance
 
   const user = await prisma.user.create({
-    data: { email, income:Number(income), avatar, name, password: hashed, balance:Number(income) },
+    data: { email, avatar, expenses, income, name, password: hashed, balance:current },
   });
 
   if (!user.id) {

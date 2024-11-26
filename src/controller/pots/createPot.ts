@@ -8,7 +8,7 @@ export const createPot: controller = async (req, res) => {
     //@ts-expect-error middleware
     const userId = req.user;
   
-    const newPot = await prisma.pot.create({
+    const newPot = await prisma.pots.create({
       data: {
         target: Number(target),
         name: name,

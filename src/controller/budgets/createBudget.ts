@@ -30,7 +30,7 @@ export const createbudget: controller = async (req, res) => {
       }
     })
     
-    const newBudget = await prisma.budget.create({
+    const newBudget = await prisma.budgets.create({
       data: {
         categoryId:categoryId,
         maximum: Number(maximum),

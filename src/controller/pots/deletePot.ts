@@ -8,7 +8,7 @@ export const deletepot: controller = async (req, res) => {
     //@ts-expect-error middleware
     const userId =req.user;
   
-    await prisma.pot.delete({
+    await prisma.pots.delete({
       where: {
         potId: Number(potId),
         userId: userId,

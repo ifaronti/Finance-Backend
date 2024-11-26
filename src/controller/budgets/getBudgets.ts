@@ -7,7 +7,7 @@ export const getBudgets: controller = async (req, res) => {
   // @ts-expect-error middleware
   const userId = req.user
   
-  const budgets = await prisma.budget.findMany({
+  const budgets = await prisma.budgets.findMany({
     where: {
       userId: userId,
     },
@@ -35,7 +35,7 @@ export const getBudgets: controller = async (req, res) => {
     return res.end("No budgets found");
   }
 
-  const chartItems = await prisma.budget.findMany({
+  const chartItems = await prisma.budgets.findMany({
     where: { userId: userId },
     select: {
       spent: true,

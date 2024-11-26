@@ -8,7 +8,7 @@ export const deleteBudget: controller = async (req, res) => {
     //@ts-expect-error middleware
     const userId = req.user;
    
-    await prisma.budget.delete({
+    await prisma.budgets.delete({
       where: {
         budgetId: Number(budgetId),
         userId:userId,

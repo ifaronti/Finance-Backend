@@ -11,7 +11,7 @@ export const getPots: controller = async (req, res) => {
   const { skip }: skip = req.query;
   //@ts-expect-error middleware
   const userId = req.user;
-  const pots = await prisma.pot.findMany({
+  const pots = await prisma.pots.findMany({
     where: {
       userId: userId,
     },
@@ -20,7 +20,7 @@ export const getPots: controller = async (req, res) => {
     take: 10,
   });
 
-  const names = await prisma.pot.findMany({
+  const names = await prisma.pots.findMany({
     where: { userId: userId },
     select: {
       name: true,

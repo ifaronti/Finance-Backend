@@ -8,87 +8,87 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id           String         @id @unique @default(uuid())
-  email        String         @unique
-  name         String         @db.VarChar()
-  avatar       String?        @db.VarChar()
-  balance      Int
-  expenses     Int            @default(0)
-  income       Int
-  password     String?        @db.VarChar()
-  updatedAt    DateTime       @updatedAt
-  createdAt    DateTime       @default(now())
-  budget       Budget[]
-  Pot          Pot[]
-  transactions Transactions[]
-  Bills        Bills[]
-  usedTokens   String[]
-  githubID     Int?           @unique
+model bills {
+  billId          Int      @id @unique @default(autoincrement())
+  name            String
+  amount          Int
+  category        String
+  isPlaceholder   Boolean  @default(false)
+  avatar          String
+  categoryId      Int
+  userId          String
+  updatedAt       DateTime @default(now())
+  createdAt       DateTime @default(now())
+  category_relate category @relation(fields: [categoryId], references: [categoryId])
+  user            user     @relation(fields: [userId], references: [id])
 }
 
-model Transactions {
+model budgets {
+  budgetId        Int      @id @unique @default(autoincrement())
+  categoryId      Int
+  category        String
+  maximum         Int
+  theme           String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @default(now())
+  spent           Int      @default(0)
+  userId          String
+  isPlaceholder   Boolean  @default(false)
+  category_relate category @relation(fields: [categoryId], references: [categoryId])
+  user            user     @relation(fields: [userId], references: [id])
+}
+
+model category {
+  categoryId   Int            @id @unique @default(autoincrement())
+  category     String
+  bills        bills[]
+  budgets      budgets[]
+  transactions transactions[]
+}
+
+model pots {
+  potId         Int      @id @unique @default(autoincrement())
+  theme         String
+  target        Int
+  total         Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+  name          String
+  isPlaceholder Boolean  @default(false)
+  userId        String
+  user          user     @relation(fields: [userId], references: [id])
+}
+
+model transactions {
   transactionId   Int      @id @default(autoincrement())
   userId          String
   recurring       Boolean
   categoryId      Int
-  category_relate Category @relation(fields: [categoryId], references: [categoryId])
   date            DateTime @default(now())
   category        String
   name            String
   amount          Int
   avatar          String
   isPlaceholder   Boolean  @default(false)
-  user            User?    @relation(fields: [userId], references: [id])
+  category_relate category @relation(fields: [categoryId], references: [categoryId])
+  user            user     @relation(fields: [userId], references: [id])
 }
 
-model Budget {
-  budgetId        Int      @id @unique @default(autoincrement())
-  categoryId      Int
-  category        String
-  category_relate Category @relation(fields: [categoryId], references: [categoryId])
-  maximum         Int
-  theme           String
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @default(now()) @updatedAt
-  spent           Int
-  userId          String
-  isPlaceholder   Boolean  @default(false)
-  user            User?    @relation(fields: [userId], references: [id])
-}
-
-model Pot {
-  potId         Int      @id @unique @default(autoincrement())
-  theme         String
-  target        Int
-  total         Int
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @default(now()) @updatedAt
-  name          String
-  isPlaceholder Boolean  @default(false)
-  userId        String
-  user          User     @relation(fields: [userId], references: [id])
-}
-
-model Bills {
-  BillId          Int      @id @unique @default(autoincrement())
-  name            String
-  amount          Int
-  category        String
-  isPlaceholder   Boolean  @default(false)
-  avatar          String
-  category_Relate Category @relation(fields: [categoryId], references: [categoryId])
-  categoryId      Int
-  userId          String
-  updatedAt       DateTime @default(now()) @updatedAt
-  createdAt       DateTime @default(now())
-  user            User     @relation(fields: [userId], references: [id])
-}
-
-model Category {
-  categoryId   Int            @id @unique @default(autoincrement())
-  category     String
-  budget       Budget[]
-  transactions Transactions[]
-  Bills        Bills[]
+model user {
+  id           String         @id @unique @default(uuid())
+  email        String         @unique
+  name         String         @db.VarChar
+  avatar       String?        @db.VarChar
+  balance      Int?
+  expenses     Int?           @default(0)
+  income       Int
+  password     String?        @db.VarChar
+  updatedAt    DateTime       @default(now())
+  createdAt    DateTime       @default(now())
+  usedTokens   String[]
+  githubid     Int?
+  bills        bills[]
+  budgets      budgets[]
+  pots         pots[]
+  transactions transactions[]
 }

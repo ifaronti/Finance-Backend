@@ -4,6 +4,7 @@ import { config } from 'dotenv'
 import jsonwebtoken from 'jsonwebtoken'
 import { populateUserData } from '../../support/placeHolder'
 import { getGithubUserData } from '../../support/githubAuthProvider'
+import * as placeholderData from '../../data.json'
 
 config()
 
@@ -32,6 +33,7 @@ type githubData = {
 
 export const oAuthLogin:controller = async(req, res) => {
     const { code } = req.query
+    const {current, expenses, income} = placeholderData.balance
     try {
         const { data, userEmail }: githubData = await getGithubUserData(String(code))
         
@@ -39,7 +41,7 @@ export const oAuthLogin:controller = async(req, res) => {
             return res.status(200).json({success:false, message:'Update your github name and or email'})
         }
 
-        let user = await prisma.user.findFirst({ where: { githubID: data.id } })
+        let user = await prisma.user.findFirst({ where: { githubid: data.id } })
         const verifiedEmail = userEmail.find(item=>item.verified)?.email
 
         if (user?.id && user?.email !== verifiedEmail) {
@@ -48,15 +50,16 @@ export const oAuthLogin:controller = async(req, res) => {
 
         const name = data.name? data.name:data.login
         
-        if (!user?.id) {
+        if (!user) {
         user = await prisma.user.create({
             data: {
-                githubID:data.id,
+                githubid:data.id,
                 email:String(verifiedEmail),
                 name: name,
                 avatar: '.'+data.avatar_url,
-                balance: 5000,
-                income:5000
+                balance: current,
+                income: income,
+                expenses:expenses
             }
         })
             await populateUserData(user.id)
@@ -69,19 +72,4 @@ export const oAuthLogin:controller = async(req, res) => {
         //@ts-expect-error err type unknown
         res.json({success:false, message:err.message});
     }
-}
-
-// let user = await prisma.user.upsert({
-//     where:{email:data.email},
-//     update: {
-//        email:data.email
-//     },
-//     create: {
-//         githubID:data.id,
-//         email: data.email,
-//         name: data.name,
-//         avatar: '.'+data.avatar_url,
-//         balance: 5000,
-//         income:5000
-//     }
-// })  
+}  

@@ -41,7 +41,7 @@ export const updatePot: controller = async (req, res) => {
     });
   }
   
-    const potUpdate = await prisma.pot.update({
+    const potUpdate = await prisma.pots.update({
       where: {
         userId: userId,
         potId: potId,

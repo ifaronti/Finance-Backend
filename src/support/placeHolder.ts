@@ -25,7 +25,7 @@ export async function populateUserData(userId: string) {
       });
     
       await prisma.transactions.createMany({ data: placeHolderTransactions });
-      await prisma.pot.createMany({ data: placeHolderPots });
-      await prisma.budget.createMany({ data: placeHolderBudgets });
+      await prisma.pots.createMany({ data: placeHolderPots });
+      await prisma.budgets.createMany({ data: placeHolderBudgets });
       await prisma.bills.createMany({ data: placeHolderBills });
 }
