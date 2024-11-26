@@ -11,7 +11,7 @@ export const deleteBudget: controller = async (req, res) => {
     await prisma.budget.delete({
       where: {
         budgetId: Number(budgetId),
-        userId: Number(userId),
+        userId:userId,
       },
     });
     return res.status(200).json({ success: true, message: "Budget deleted" });

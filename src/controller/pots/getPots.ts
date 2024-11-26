@@ -10,7 +10,7 @@ type skip = {
 export const getPots: controller = async (req, res) => {
   const { skip }: skip = req.query;
   //@ts-expect-error middleware
-  const userId = Number(req.user);
+  const userId = req.user;
   const pots = await prisma.pot.findMany({
     where: {
       userId: userId,

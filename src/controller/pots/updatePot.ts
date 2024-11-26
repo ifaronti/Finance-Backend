@@ -20,16 +20,17 @@ export const updatePot: controller = async (req, res) => {
     const { name, target, total, theme, potId }: thePot = req.body;
     const { add, subtract } = req.query;
     //@ts-expect-error middleware
-    const userId = Number(req.user);
+    const userId = req.user;
     const query: updateQuery = {};
   
-    if (add && add != "") {
+    if (add && add !== "") {
       query.increment = Number(add);
     }
     if (subtract && subtract !== "") {
       query.decrement = Number(subtract);
     }
   
+  if (subtract || add) {
     await prisma.user.update({
       where: {
         id: userId,
@@ -38,6 +39,7 @@ export const updatePot: controller = async (req, res) => {
         balance: query,
       },
     });
+  }
   
     const potUpdate = await prisma.pot.update({
       where: {

@@ -36,7 +36,7 @@ export const oAuthLogin:controller = async(req, res) => {
         const { data, userEmail }: githubData = await getGithubUserData(String(code))
         
         if (!data.name || !userEmail[0]) {
-            return res.json({success:false, message:'Update your github name and or email'})
+            return res.status(200).json({success:false, message:'Update your github name and or email'})
         }
 
         let user = await prisma.user.findFirst({ where: { githubID: data.id } })
@@ -45,13 +45,15 @@ export const oAuthLogin:controller = async(req, res) => {
         if (user?.id && user?.email !== verifiedEmail) {
            await prisma.user.update({data: {email:String(data.email)}, where:{id:user.id}})
         } 
+
+        const name = data.name? data.name:data.login
         
         if (!user?.id) {
         user = await prisma.user.create({
             data: {
                 githubID:data.id,
                 email:String(verifiedEmail),
-                name: data.name? data.name:data.login,
+                name: name,
                 avatar: '.'+data.avatar_url,
                 balance: 5000,
                 income:5000

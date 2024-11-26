@@ -5,7 +5,7 @@ import { sortResponse } from "../../support/sort";
 const prisma = new PrismaClient();
 
 type catQuery = {
-  userId: number;
+  userId: string;
   category: string;
   name?: { contains: string, mode: 'insensitive' }
   recurring?:boolean

@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 
 export const deleteUser: controller = async (req, res) => {
     //@ts-expect-error middleware
-    const userId = Number(req.user)
+    const userId = req.user
 
     await prisma.budget.deleteMany({where:{userId:userId}})
     await prisma.pot.deleteMany({where:{userId:userId}})

@@ -9,10 +9,10 @@ datasource db {
 }
 
 model User {
-  id           Int            @id @unique @default(autoincrement())
+  id           String         @id @unique @default(uuid())
   email        String         @unique
   name         String         @db.VarChar()
-  avatar       String         @db.VarChar()
+  avatar       String?        @db.VarChar()
   balance      Int
   expenses     Int            @default(0)
   income       Int
@@ -29,7 +29,7 @@ model User {
 
 model Transactions {
   transactionId   Int      @id @default(autoincrement())
-  userId          Int
+  userId          String
   recurring       Boolean
   categoryId      Int
   category_relate Category @relation(fields: [categoryId], references: [categoryId])
@@ -52,7 +52,7 @@ model Budget {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @default(now()) @updatedAt
   spent           Int
-  userId          Int
+  userId          String
   isPlaceholder   Boolean  @default(false)
   user            User?    @relation(fields: [userId], references: [id])
 }
@@ -66,7 +66,7 @@ model Pot {
   updatedAt     DateTime @default(now()) @updatedAt
   name          String
   isPlaceholder Boolean  @default(false)
-  userId        Int
+  userId        String
   user          User     @relation(fields: [userId], references: [id])
 }
 
@@ -79,7 +79,7 @@ model Bills {
   avatar          String
   category_Relate Category @relation(fields: [categoryId], references: [categoryId])
   categoryId      Int
-  userId          Int
+  userId          String
   updatedAt       DateTime @default(now()) @updatedAt
   createdAt       DateTime @default(now())
   user            User     @relation(fields: [userId], references: [id])
