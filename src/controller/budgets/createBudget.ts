@@ -19,7 +19,7 @@ export const createbudget: controller = async (req, res) => {
   
     const totalSpent = await prisma.transactions.aggregate({
       where: {
-        userId: Number(userId),
+        userId: userId,
         category: category,
         date: {
           gt:"2024-07-31T20:50:18Z"

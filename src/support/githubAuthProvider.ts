@@ -13,15 +13,19 @@ export async function getGithubUserData(code: string) {
             headers:{"Content-Type": "application/json"}
         }).then(res => res.data)
 
-        const {access_token} = qs.parse(token)
+    const {access_token} = qs.parse(token)
 
-        const {data} = await axios.get("https://api.github.com/user",
-            {headers: {
-                        Authorization: `Bearer ${access_token}`,
-                        "Content-Type":'application/json'
-                    },
-            }
-        )
+    const {data} = await axios.get("https://api.github.com/user",
+        {headers: {
+                    Authorization: `Bearer ${access_token}`,
+                    "Content-Type":'application/json'
+                },
+        }
+    )
     
-    return data
+    const userEmail = await axios.get("https://api.github.com/user/emails",
+        {headers:{Authorization: `Bearer ${access_token}`}}
+    ).then(res=>res.data)
+
+    return {data, userEmail}
 }

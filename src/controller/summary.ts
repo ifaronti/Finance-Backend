@@ -12,14 +12,14 @@ export const Summaries: controller = async (req, res) => {
     
     const transactions = await prisma.transactions.findMany({
         where: {
-            userId:Number(userId)
+            userId:userId
         },
         take:5
     })
 
     const bills = await prisma.bills.findMany({
         where: {
-            userId: Number(userId),
+            userId: userId,
         },
     })
 
@@ -33,7 +33,7 @@ export const Summaries: controller = async (req, res) => {
       })
 
     const budgetAggregate = await prisma.budget.aggregate({
-        where: { userId: Number(userId) },
+        where: { userId: userId },
         _sum: {
             maximum: true,
             spent:true
@@ -41,7 +41,7 @@ export const Summaries: controller = async (req, res) => {
     })
 
     const budgetSnippet = await prisma.budget.findMany({
-        where: { userId: Number(userId) },
+        where: { userId: userId },
         select: {
             category: true,
             maximum: true,
@@ -51,14 +51,14 @@ export const Summaries: controller = async (req, res) => {
     })
 
     const potsTotal = await prisma.pot.aggregate({
-        where: { userId: Number(userId) },
+        where: { userId: userId },
         _sum: {
             total: true,
         },
     })
 
     const potSnippet = await prisma.pot.findMany({
-        where: { userId: Number(userId) },
+        where: { userId: userId },
         select: {
             theme: true,
             name: true,

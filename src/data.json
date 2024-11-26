@@ -13,7 +13,7 @@
             "date": "2024-08-19T14:23:11Z",
             "amount": 75.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -24,7 +24,7 @@
             "date": "2024-08-19T20:23:11Z",
             "amount": -55.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -35,7 +35,7 @@
             "date": "2024-08-18T09:45:32Z",
             "amount": -42.30,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -46,7 +46,7 @@
             "date": "2024-08-17T16:12:05Z",
             "amount": 120.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -57,7 +57,7 @@
             "date": "2024-08-17T21:08:09Z",
             "amount": -65.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -68,7 +68,7 @@
             "date": "2024-08-15T18:20:33Z",
             "amount": 65.75,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 3
         },
         {
@@ -79,7 +79,7 @@
             "date": "2024-08-14T13:05:27Z",
             "amount": 50.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -90,7 +90,7 @@
             "date": "2024-08-13T20:15:59Z",
             "amount": -32.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -101,7 +101,7 @@
             "date": "2024-08-11T15:45:38Z",
             "amount": -5.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 10
         },
         {
@@ -112,7 +112,7 @@
             "date": "2024-08-11T18:45:38Z",
             "amount": -10.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 10
         },
         {
@@ -123,7 +123,7 @@
             "date": "2024-08-10T19:22:51Z",
             "amount": -45.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -134,7 +134,7 @@
             "date": "2024-08-08T08:55:17Z",
             "amount": -15.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         },
         {
@@ -145,7 +145,7 @@
             "date": "2024-08-07T17:40:29Z",
             "amount": -35.25,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 8
         },
         {
@@ -156,7 +156,7 @@
             "date": "2024-08-06T08:25:44Z",
             "amount": -78.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 3
         },
         {
@@ -167,7 +167,7 @@
             "date": "2024-08-06T10:05:44Z",
             "amount": -22.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         },
         {
@@ -178,7 +178,7 @@
             "date": "2024-08-05T14:30:56Z",
             "amount": -10.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 6
         },
         {
@@ -189,7 +189,7 @@
             "date": "2024-08-04T11:15:22Z",
             "amount": -50.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 1
         },
         {
@@ -200,7 +200,7 @@
             "date": "2024-08-03T14:00:37Z",
             "amount": -30.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 6
         },
         {
@@ -211,7 +211,7 @@
             "date": "2024-08-02T09:25:11Z",
             "amount": -100.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -222,7 +222,7 @@
             "date": "2024-08-02T13:31:11Z",
             "amount": -50.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -233,7 +233,7 @@
             "date": "2024-08-01T18:40:33Z",
             "amount": -18.75,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         },
         {
@@ -244,7 +244,7 @@
             "date": "2024-07-30T13:20:14Z",
             "amount": -100.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -255,7 +255,7 @@
             "date": "2024-07-29T11:55:29Z",
             "amount": -35.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -266,7 +266,7 @@
             "date": "2024-07-29T13:51:29Z",
             "amount": -28.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -277,7 +277,7 @@
             "date": "2024-07-27T20:15:06Z",
             "amount": -42.75,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -288,7 +288,7 @@
             "date": "2024-07-26T09:43:23Z",
             "amount": -89.99,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 9
         },
         {
@@ -299,7 +299,7 @@
             "date": "2024-07-26T14:40:23Z",
             "amount": 3358.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -310,7 +310,7 @@
             "date": "2024-07-25T16:25:37Z",
             "amount": -29.99,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 9
         },
         {
@@ -321,7 +321,7 @@
             "date": "2024-07-23T09:35:14Z",
             "amount": -49.99,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 8
         },
         {
@@ -332,7 +332,7 @@
             "date": "2024-07-21T10:05:42Z",
             "amount": -9.99,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -343,7 +343,7 @@
             "date": "2024-07-20T17:30:55Z",
             "amount": -25.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -354,7 +354,7 @@
             "date": "2024-07-19T12:45:09Z",
             "amount": 50.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -365,7 +365,7 @@
             "date": "2024-07-18T19:20:23Z",
             "amount": -38.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -376,7 +376,7 @@
             "date": "2024-07-17T14:55:37Z",
             "amount": -29.99,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 9
         },
         {
@@ -387,7 +387,7 @@
             "date": "2024-07-16T10:10:51Z",
             "amount": -52.75,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 3
         },
         {
@@ -398,7 +398,7 @@
             "date": "2024-07-15T16:35:04Z",
             "amount": 75.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -409,7 +409,7 @@
             "date": "2024-07-14T20:50:18Z",
             "amount": -41.25,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -420,7 +420,7 @@
             "date": "2024-07-13T09:15:32Z",
             "amount": -10.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 10
         },
         {
@@ -431,7 +431,7 @@
             "date": "2024-07-12T13:40:46Z",
             "amount": -95.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -442,7 +442,7 @@
             "date": "2024-07-11T18:05:59Z",
             "amount": -33.75,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {   "isPlaceholder":true,
@@ -452,7 +452,7 @@
             "date": "2024-07-10T12:30:13Z",
             "amount": -27.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -463,7 +463,7 @@
             "date": "2024-07-09T08:55:27Z",
             "amount": -12.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         },
         {
@@ -474,7 +474,7 @@
             "date": "2024-07-08T15:20:41Z",
             "amount": -65.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 8
         },
         {
@@ -485,7 +485,7 @@
             "date": "2024-07-07T11:45:55Z",
             "amount": -20.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         },
         {
@@ -496,7 +496,7 @@
             "date": "2024-07-06T17:10:09Z",
             "amount": 20.00,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 7
         },
         {
@@ -507,7 +507,7 @@
             "date": "2024-07-05T11:15:22Z",
             "amount": -50.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 1
         },
         {
@@ -518,7 +518,7 @@
             "date": "2024-07-03T14:00:37Z",
             "amount": -30.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 6
         },
         {
@@ -529,7 +529,7 @@
             "date": "2024-07-02T09:25:51Z",
             "amount": -100.00,
             "recurring": true,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -540,7 +540,7 @@
             "date": "2024-07-02T19:50:05Z",
             "amount": -16.50,
             "recurring": false,
-            "userId":1,
+            "userId":"",
             "categoryId": 5
         }
     ],
@@ -551,7 +551,7 @@
             "maximum": 50.00,
             "theme": "#277C78",
             "spent":15.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 10
         },
         {
@@ -560,7 +560,7 @@
             "maximum": 750.00,
             "theme": "#82C9D7",
             "spent":150.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -569,7 +569,7 @@
             "maximum": 75.00,
             "theme": "#F2CDAC",
             "spent":133.75,
-            "userId":1,
+            "userId":"",
             "categoryId": 4
         },
         {
@@ -578,7 +578,7 @@
             "maximum": 100.00,
             "theme": "#626070",
             "spent":40.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 6
         }
     ],
@@ -589,7 +589,7 @@
             "target": 2000.00,
             "total": 159.00,
             "theme": "#277C78",
-            "userId":1
+            "userId":""
         },
         {
             "isPlaceholder":true,
@@ -597,7 +597,7 @@
             "target": 150.00,
             "total": 110.00,
             "theme": "#626070",
-            "userId":1
+            "userId":""
         },
         {
             "isPlaceholder":true,
@@ -605,7 +605,7 @@
             "target": 60.00,
             "total": 40.00,
             "theme": "#82C9D7",
-            "userId":1
+            "userId":""
         },
         {
             "isPlaceholder":true,
@@ -613,7 +613,7 @@
             "target": 1000.00,
             "total": 10.00,
             "theme": "#F2CDAC",
-            "userId":1
+            "userId":""
         },
         {
             "isPlaceholder":true,
@@ -621,7 +621,7 @@
             "target": 1440.00,
             "total": 531.00,
             "theme": "#826CB0",
-            "userId":1
+            "userId":""
             
         }
     ],
@@ -646,7 +646,7 @@
             "name": "Nimbus Data Storage",
             "category": "Bills",
             "amount": -9.99,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -655,7 +655,7 @@
             "name": "ByteWise",
             "category": "Lifestyle",
             "amount": -49.99,
-            "userId":1,
+            "userId":"",
             "categoryId": 8
         },
 
@@ -665,7 +665,7 @@
             "name": "EcoFuel Energy",
             "category": "Bills",
             "amount": -35.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
 
@@ -675,7 +675,7 @@
             "name": "Aqua Flow Utilities",
             "category": "Bills",
             "amount": -100.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
         {
@@ -684,7 +684,7 @@
             "name": "Spark Electric Solutions",
             "category": "Bills",
             "amount": -100.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 2
         },
 
@@ -694,7 +694,7 @@
             "name": "Serenity Spa & Wellness",
             "category": "Personal Care",
             "amount": -30.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 6
         },
 
@@ -704,7 +704,7 @@
             "name": "Elevate Education",
             "category": "Education",
             "amount": -50.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 1
         },
 
@@ -714,7 +714,7 @@
             "name": "Pixel Playground",
             "category": "Entertainment",
             "amount": -10.00,
-            "userId":1,
+            "userId":"",
             "categoryId": 10
         }
     ]

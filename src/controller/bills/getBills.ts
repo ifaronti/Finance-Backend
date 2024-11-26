@@ -5,13 +5,13 @@ import { sortResponse } from "../../support/sort";
 const prisma = new PrismaClient();
 type query = {
   name?: { contains: string; mode: "insensitive" };
-  userId: number;
+  userId: string;
 };
 
 export const getBills: controller = async (req, res) => {
   const { skip, name, sort } = req.query;
   //@ts-expect-error authentication middleware
-  const query: query = { userId: Number(req.user) };
+  const query: query = { userId: req.user };
 
   if (name && name !== undefined && name !== null && name !== "") {
     query.name = { contains: name?.toString(), mode: "insensitive" };

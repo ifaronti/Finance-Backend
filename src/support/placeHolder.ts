@@ -3,24 +3,24 @@ import * as placeholderData from '../data.json'
 
 const prisma = new PrismaClient()
 
-export async function populateUserData(userId: number) {
+export async function populateUserData(userId: string) {
     const placeHolderTransactions = placeholderData.transactions.map((item) => {
-        item.userId = Number(userId);
+        item.userId =String(userId);
         return item;
       });
     
       const placeHolderBudgets = placeholderData.budgets.map((item) => {
-        item.userId = Number(userId);
+        item.userId =String(userId);
         return item;
       });
     
       const placeHolderPots = placeholderData.pots.map((item) => {
-        item.userId = Number(userId);
+        item.userId =String(userId);
         return item;
       });
     
       const placeHolderBills = placeholderData.recurringBills.map((item) => {
-        item.userId = Number(userId);
+        item.userId =String(userId);
         return item;
       });
     

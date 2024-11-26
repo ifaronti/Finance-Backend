@@ -6,7 +6,7 @@ const prisma = new PrismaClient()
 export const createPot: controller = async (req, res) => {
     const { target, name, total, theme } = req.body;
     //@ts-expect-error middleware
-    const userId = Number(req.user);
+    const userId = req.user;
   
     const newPot = await prisma.pot.create({
       data: {

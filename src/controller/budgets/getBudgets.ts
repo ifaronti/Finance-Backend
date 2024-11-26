@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export const getBudgets: controller = async (req, res) => {
   // @ts-expect-error middleware
-  const userId = Number(req.user)
+  const userId = req.user
   
   const budgets = await prisma.budget.findMany({
     where: {

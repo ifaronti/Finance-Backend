@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export const deletepot: controller = async (req, res) => {
     const { potId } = req.query;
     //@ts-expect-error middleware
-    const userId = Number(req.user);
+    const userId =req.user;
   
     await prisma.pot.delete({
       where: {
