@@ -35,7 +35,8 @@ export const oAuthLogin:controller = async(req, res) => {
     const { code } = req.query
     const {current, expenses, income} = placeholderData.balance
     try {
-        const { data, userEmail }: githubData = await getGithubUserData(String(code))
+        //@ts-expect-error your opinion sucks here typescript but it's not needed
+        const { data, userEmail }: githubData = await getGithubUserData(String(code), res)
         
         if (!data.name || !userEmail[0]) {
             return res.status(200).json({success:false, message:'Update your github name and or email'})
