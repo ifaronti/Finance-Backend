@@ -17,25 +17,12 @@ export const createbudget: controller = async (req, res) => {
     //@ts-expect-error middleware
     const userId = req.user;
   
-    const totalSpent = await prisma.transactions.aggregate({
-      where: {
-        userId: userId,
-        category: category,
-        date: {
-          gt:"2024-07-31T20:50:18Z"
-        }
-      },
-      _sum: {
-        amount:true
-      }
-    })
-    
     const newBudget = await prisma.budgets.create({
       data: {
         categoryId:categoryId,
         maximum: Number(maximum),
         theme: theme,
-        spent: Number(totalSpent._sum.amount?.toString().replace('-',''))||0,
+        spent: 0,
         userId: userId,
         category: category,
       },

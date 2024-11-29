@@ -67,7 +67,7 @@ model transactions {
   date            DateTime @default(now())
   category        String
   name            String
-  amount          Int
+  amount          Decimal @db.Decimal(30, 2)
   avatar          String
   isPlaceholder   Boolean  @default(false)
   category_relate category @relation(fields: [categoryId], references: [categoryId])
