@@ -20,7 +20,7 @@ export async function populateUserData(userId: string) {
       });
     
       const placeHolderBills = placeholderData.recurringBills.map((item) => {
-        item.userId =String(userId);
+        item.userId = String(userId);
         return item;
       });
     

@@ -11,10 +11,11 @@ datasource db {
 model bills {
   billId          Int      @id @unique @default(autoincrement())
   name            String
-  amount          Int
+  amount          Decimal  @db.Decimal(30, 2)
   category        String
   isPlaceholder   Boolean  @default(false)
   avatar          String
+  due_day         Int
   categoryId      Int
   userId          String
   updatedAt       DateTime @default(now())
@@ -27,11 +28,11 @@ model budgets {
   budgetId        Int      @id @unique @default(autoincrement())
   categoryId      Int
   category        String
-  maximum         Int
+  maximum         Decimal  @db.Decimal(30, 2)
   theme           String
   createdAt       DateTime @default(now())
   updatedAt       DateTime @default(now())
-  spent           Int      @default(0)
+  spent           Decimal  @default(0) @db.Decimal(30, 2)
   userId          String
   isPlaceholder   Boolean  @default(false)
   category_relate category @relation(fields: [categoryId], references: [categoryId])
@@ -49,8 +50,8 @@ model category {
 model pots {
   potId         Int      @id @unique @default(autoincrement())
   theme         String
-  target        Int
-  total         Int
+  target        Decimal  @db.Decimal(30, 2)
+  total         Decimal  @db.Decimal(30, 2)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @default(now())
   name          String
@@ -67,7 +68,7 @@ model transactions {
   date            DateTime @default(now())
   category        String
   name            String
-  amount          Decimal @db.Decimal(30, 2)
+  amount          Decimal  @db.Decimal(30, 2)
   avatar          String
   isPlaceholder   Boolean  @default(false)
   category_relate category @relation(fields: [categoryId], references: [categoryId])
@@ -79,9 +80,9 @@ model user {
   email        String         @unique
   name         String         @db.VarChar
   avatar       String?        @db.VarChar
-  balance      Int?
-  expenses     Int?           @default(0)
-  income       Int
+  balance      Decimal?       @db.Decimal(30, 2)
+  expenses     Decimal?       @db.Decimal(30, 2)
+  income       Decimal        @db.Decimal(30, 2)
   password     String?        @db.VarChar
   updatedAt    DateTime       @default(now())
   createdAt    DateTime       @default(now())
