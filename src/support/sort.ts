@@ -4,22 +4,23 @@ export const sortResponse = (sort: string, createdAt?:string) => {
     if (sort && sort !== "" ) {
         switch (sort) {
           case "Latest":
-            theOrder = createdAt? { createdAt: "desc" }:{date:'desc'}
+            theOrder = createdAt? 'bill_day."createdAt" DESC'.replace("'", ''):{date:'desc'}
             break;
           case "Oldest":
-            theOrder = createdAt?{ createdAt: "asc" }:{date:'asc'}
+            theOrder = createdAt?'bill_day."createdAt" ASC'.replace("'", ''):{date:'asc'}
             break;
           case "A-Z":
-            theOrder = { name: "asc" };
+            theOrder = createdAt? 'bill_day.name DESC'.replace("'", ''):{ name: "asc" };
             break;
           case "Z-A":
-            theOrder = { name: "desc" };
+            theOrder = createdAt? 'bill_day.name ASC'.replace("'", ''):{ name: "desc" };
             break;
           case "Highest":
-            theOrder = { amount: "desc" };
+            theOrder = createdAt? 'bill_day.amount DESC'.replace("'", ''):{ amount: "desc" };
             break;
-          default:
-            theOrder = { amount: "asc" };
+          case "Lowest":
+            theOrder = createdAt ? 'bill_day.amount ASC'.replace("'", '') : { amount: "asc" };
+            break
         }
         return theOrder
       }

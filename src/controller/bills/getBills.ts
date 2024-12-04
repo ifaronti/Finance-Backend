@@ -1,46 +1,72 @@
 import { PrismaClient } from "@prisma/client";
 import { controller } from "../auth/signup.controller";
 import { sortResponse } from "../../support/sort";
+import { getLastDayOfMonth } from "../../support/lastDay";
 
 const prisma = new PrismaClient();
-type query = {
-  name?: { contains: string; mode: "insensitive" };
-  userId: string;
-};
+
+type bill = {
+  billId: number
+  name: string            
+  amount:number        
+  category:string        
+  isPlaceholder:boolean 
+  avatar:string         
+  due_day:number         
+  categoryId:number     
+  updatedAt:string      
+  createdAt:string       
+}
 
 export const getBills: controller = async (req, res) => {
   const { skip, name, sort } = req.query;
-  //@ts-expect-error authentication middleware
-  const query: query = { userId: req.user };
-
-  if (name && name !== undefined && name !== null && name !== "") {
-    query.name = { contains: name?.toString(), mode: "insensitive" };
-  }
+  // @ts-expect-error authorization middleware
+  const userId = req.user;
+  const today = new Date().getDay() + 1;
+  const lastDay = getLastDayOfMonth();
   const order = sortResponse(String(sort), "createdAt");
-  const objectMonth = new Date().getMonth() + 1
-  const presentMonth = objectMonth > 9? objectMonth:'0'+objectMonth
-  const presentYear = new Date().getFullYear()
+  const sanitizedName = name ? String(name).replace(/[^a-zA-Z0-9 ]/g, '') : ''
+  
+  let query = `
+    WITH bill_day AS (
+        SELECT
+            CASE
+                WHEN (b.due_day <= $1) THEN 'paid'
+                WHEN (b.due_day > $1) AND (b.due_day - $1 < 7) THEN 'soon'
+                WHEN (b.due_day > $1) AND (b.due_day - $1 > 7) THEN 'upcoming'
+                WHEN ($2 = $1) AND (b.due_day < 7) THEN 'soon'
+                ELSE 'upcoming'
+            END AS status,
+            b.name,
+            b.amount,
+            b.avatar,
+            b.due_day,
+            b."billId",
+            b.category,
+            b."categoryId",
+            b."userId",
+            b."createdAt"
+        FROM bills b
+    )
+    SELECT * 
+    FROM bill_day
+    WHERE bill_day."userId" = $3`;
+  
+  const params = [today, lastDay, userId, order, Number(skip)];
 
-  const bills = await prisma.bills.findMany({
-    where: { ...query },
-    skip: Number(skip),
-    take: 10,
-    orderBy: order,
-  });
-
-  const paidBills = await prisma.transactions.findMany({
-    where: {
-      recurring: true,
-      date: {
-        gte:`${presentYear}-${presentMonth}-01T00:00:00Z`
-      }
-    }
-  })
-
+  if (sanitizedName && sanitizedName !== '') {
+      query += ` AND POSITION(LOWER($6) IN LOWER(bill_day.name)) > 0`;
+      params.push(sanitizedName);
+  } else {
+    // //
+  }
+  
+  const bills: bill[] = await prisma.$queryRawUnsafe(query, ...params);
+  
   if (!bills[0]) {
     return res.end("No bills available for user");
   }
   const isLastPage = bills.length < 10 ? true : false;
 
-  return res.status(200).json({ success: true, data: bills, isLastPage, paidBills });
+  return res.status(200).json({ success: true, data: bills, isLastPage});
 };

@@ -13,20 +13,22 @@ type budget = {
   };
 
 export const createbudget: controller = async (req, res) => {
-    const {categoryId, category, maximum, theme }: budget = req.body;
-    //@ts-expect-error middleware
-    const userId = req.user;
+  const {categoryId, category, maximum, theme }: budget = req.body;
+  //@ts-expect-error middleware
+  const userId = req.user;
+  const max = Number(maximum)
   
-    const newBudget = await prisma.budgets.create({
-      data: {
-        categoryId:categoryId,
-        maximum: Number(maximum),
-        theme: theme,
-        spent: 0,
-        userId: userId,
-        category: category,
-      },
-    });
+  const newBudget:budget = await prisma.$queryRaw`
+      INSERT INTO budgets ("categoryId", maximum, theme, spent, "userId", category)
+      VALUES (
+        ${categoryId},
+        ${max},
+        ${theme},
+        (SELECT SUM(t.amount) FROM transactions t WHERE t."userId" = ${userId} AND t.category = ${category} AND EXTRACT(MONTH FROM t.date) > 7 AND position('-' IN t.amount::text)>0),
+        ${userId},
+        ${category}
+      )
+    `
     if (!newBudget.budgetId) {
       return res.end("An error has occured, Budget was not created");
     }
