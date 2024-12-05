@@ -15,7 +15,14 @@ export const getPots: controller = async (req, res) => {
     where: {
       userId: userId,
     },
-    orderBy: { createdAt: "asc" },
+    select: {
+      name: true,
+      theme: true,
+      target: true,
+      total: true,
+      potId:true
+    },
+    orderBy: { createdAt: "desc" },
     skip: Number(skip),
     take: 10,
   });

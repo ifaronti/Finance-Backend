@@ -17,7 +17,7 @@ export const getBudgets: controller = async (req, res) => {
             t."categoryId",
             ROW_NUMBER() OVER (PARTITION BY t."categoryId" ORDER BY t.date DESC) as t_rows
         FROM transactions t
-        WHERE t."userId" = ${userId}
+        WHERE t."userId" = ${userId} AND t.amount::text LIKE '%-%'
       )
       SELECT
         bg.category,
@@ -47,7 +47,7 @@ export const getBudgets: controller = async (req, res) => {
         ) AS transactions
     FROM budgets bg
     LEFT JOIN cte_transactions tc
-    ON bg."categoryId" = tc."categoryId" AND tc.amount::text LIKE '%-%' AND tc.t_rows <=3
+    ON bg."categoryId" = tc."categoryId" AND tc.t_rows <=3
     WHERE bg."userId" = ${userId}
     GROUP BY bg."budgetId", bg.category, bg."categoryId", bg.maximum, bg.theme
   `;
