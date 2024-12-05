@@ -14,6 +14,7 @@ export const Summaries: controller = async (req, res) => {
                     u.expenses,
                     u.balance,
                     u.id as id,
+                    (SELECT SUM(bi.amount) FROM bills bi WHERE bi."userId" = ${userId}) AS total_bills,
                     (SELECT SUM(bi.amount) FROM bills bi WHERE bi."userId" = ${userId} AND bi.due_day <= ${today+1}) AS paid_bills,
                     (SELECT SUM(bi.amount) FROM bills bi WHERE bi."userId" = ${userId} AND bi.due_day - ${today+1}  > 7) AS upcoming_bills,
                     (SELECT SUM(bi.amount) FROM bills bi WHERE bi."userId" = ${userId} AND bi.due_day - ${today+1}  <= 7 AND bi.due_day > ${today+1}) AS due_soon,
@@ -63,6 +64,7 @@ export const Summaries: controller = async (req, res) => {
             s.due_soon,
             s.total_spent,
             s.total_limits,
+            s.total_bills,
             (   SELECT json_agg(
                     json_build_object(
                         'category', b.category,

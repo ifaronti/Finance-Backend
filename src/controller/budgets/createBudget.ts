@@ -24,7 +24,7 @@ export const createbudget: controller = async (req, res) => {
         ${categoryId},
         ${max},
         ${theme},
-        (SELECT SUM(t.amount) FROM transactions t WHERE t."userId" = ${userId} AND t.category = ${category} AND EXTRACT(MONTH FROM t.date) > 7 AND position('-' IN t.amount::text)>0),
+        (SELECT SUM(t.amount) FROM transactions t WHERE t."userId" = ${userId} AND t.category = ${category} AND EXTRACT(MONTH FROM t.date) > 7 AND t.amount::text LIKE '%-%'),
         ${userId},
         ${category}
       )
